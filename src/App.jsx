@@ -1,8 +1,9 @@
 import React from 'react';
+import Resume from './base/page/Resume';
 
 const App = () => (
-  <div className="App">
-    <h1>hue</h1>
+  <div>
+    <Resume />
   </div>
 );
 

@@ -34,6 +34,7 @@
     "postcss-loader": "2.0.6",
     "promise": "8.0.1",
     "react": "^16.0.0",
+    "react-circular-progressbar": "^0.2.1",
     "react-dev-utils": "^4.1.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
@@ -58,6 +59,7 @@
     "cc-report": "node scripts/report.js"
   },
   "jest": {
+    "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
