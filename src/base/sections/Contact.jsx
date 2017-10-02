@@ -1,6 +1,5 @@
 import React from 'react';
-import { Segment, Container, Grid, Header, Image } from 'semantic-ui-react';
-import '../assets/CircularProgress.css';
+import { Segment, Container, Grid, Header, Icon } from 'semantic-ui-react';
 
 const styles = {
   page: {
@@ -49,41 +48,50 @@ const styles = {
   },
 };
 
-const Work = () => (
+const Contact = () => (
   <Segment style={styles.page}>
     <Grid style={styles.grid}>
       <Grid.Column width={6}>
         <Header as="h1" textAlign="center" style={{ ...styles.title, ...styles.name }}>
-          Minha Experiência
+          Contate Me
         </Header>
       </Grid.Column>
       <Grid.Column width={10}>
         <Container>
-          <Header as="h2">7 Anos de Experiência</Header>
+          <Header as="h2">Vamos Manter Contato</Header>
           <p style={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi consectetur,
             delectus dicta distinctio et libero nemo praesentium quod repellendus saepe
             temporibus voluptas.
           </p>
-          <Grid celled="internally" style={styles.group}>
+          <Grid columns="equal" style={styles.group}>
             <Grid.Row>
               <Grid.Column>
                 <Grid>
                   <Grid.Column width={4}>
-                    <Image src="http://via.placeholder.com/350x250" />
+                    <Icon name="address card" size="huge" color="red" />
                   </Grid.Column>
                   <Grid.Column width={12}>
                     <Header as="h2" style={styles.title}>
-                      Contem1g Magic
-                      <Header.Subheader style={styles.subtitle}>
-                        Agosto, 2017 - Atualmente (2 meses)
-                      </Header.Subheader>
+                      Endereço
                     </Header>
                     <p style={styles.text}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Amet animi consectetur,
-                      delectus dicta distinctio et libero nemo praesentium quod repellendus saepe
-                      temporibus voluptas.
+                      São Paulo - SP
+                    </p>
+                  </Grid.Column>
+                </Grid>
+              </Grid.Column>
+              <Grid.Column>
+                <Grid>
+                  <Grid.Column width={4}>
+                    <Icon name="whatsapp" size="huge" color="yellow" />
+                  </Grid.Column>
+                  <Grid.Column width={12}>
+                    <Header as="h2" style={styles.title}>
+                      WhatsApp
+                    </Header>
+                    <p style={styles.text}>
+                      +55 11 95273 6102
                     </p>
                   </Grid.Column>
                 </Grid>
@@ -93,43 +101,32 @@ const Work = () => (
               <Grid.Column>
                 <Grid>
                   <Grid.Column width={4}>
-                    <Image src="http://via.placeholder.com/350x250" />
+                    <Icon name="mail outline" size="huge" color="purple" />
                   </Grid.Column>
                   <Grid.Column width={12}>
                     <Header as="h2" style={styles.title}>
-                      Contem1g Magic
-                      <Header.Subheader style={styles.subtitle}>
-                        Agosto, 2017 - Atualmente (2 meses)
-                      </Header.Subheader>
+                      E-mail de Contato
                     </Header>
                     <p style={styles.text}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Amet animi consectetur,
-                      delectus dicta distinctio et libero nemo praesentium quod repellendus saepe
-                      temporibus voluptas.
+                      contato@akamuraasai.work
                     </p>
                   </Grid.Column>
                 </Grid>
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row>
               <Grid.Column>
                 <Grid>
                   <Grid.Column width={4}>
-                    <Image src="http://via.placeholder.com/350x250" />
+                    <Icon name="external" size="huge" color="blue" />
                   </Grid.Column>
                   <Grid.Column width={12}>
                     <Header as="h2" style={styles.title}>
-                      Contem1g Magic
-                      <Header.Subheader style={styles.subtitle}>
-                        Agosto, 2017 - Atualmente (2 meses)
-                      </Header.Subheader>
+                      Redes Sociais
                     </Header>
                     <p style={styles.text}>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Amet animi consectetur,
-                      delectus dicta distinctio et libero nemo praesentium quod repellendus saepe
-                      temporibus voluptas.
+                      <a href="https://fb.com/"><Icon name="linkedin" link /></a>
+                      <a href="https://fb.com/"><Icon name="github" link /></a>
+                      <a href="https://fb.com/"><Icon name="bitbucket" link /></a>
+                      <a href="https://fb.com/"><Icon name="codepen" link /></a>
                     </p>
                   </Grid.Column>
                 </Grid>
@@ -142,4 +139,4 @@ const Work = () => (
   </Segment>
 );
 
-export default Work;
+export default Contact;
