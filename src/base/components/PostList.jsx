@@ -7,7 +7,7 @@ const makePost = (items) => {
 
   return list.map(item => (
     <Card
-      key={item.key}
+      key={item.id}
       image={item.image}
       header={item.title}
       meta={item.date}
