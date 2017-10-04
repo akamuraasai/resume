@@ -49,7 +49,7 @@
     "semantic-ui-react": "^0.74.2",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
-    "url-loader": "0.5.9",
+    "url-loader": "0.6.0",
     "wallaby-webpack": "^0.0.42",
     "webpack": "3.5.1",
     "webpack-dev-server": "2.8.2",
