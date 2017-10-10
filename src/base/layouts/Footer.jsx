@@ -6,7 +6,7 @@ import { Segment, Container, Grid, Icon } from 'semantic-ui-react';
 const Footer = props => (
   <Segment inverted vertical style={{ paddingTop: 30, paddingBottom: 30 }}>
     <Container>
-      <Grid>
+      <Grid stackable>
         <Grid.Row>
           <Grid.Column width={3}>
             &copy;{(new Date()).getFullYear()} / {props.name}

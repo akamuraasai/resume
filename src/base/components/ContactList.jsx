@@ -29,7 +29,7 @@ const makeContact = (items) => {
 
   return list.map(item => (
     <Grid.Column key={item.id} width={8} style={styles.group}>
-      <Grid>
+      <Grid stackable>
         <Grid.Column width={4}>
           <Icon name={item.icon} size="huge" color={item.color} />
         </Grid.Column>
@@ -47,7 +47,7 @@ const makeContact = (items) => {
 };
 
 const ContactList = props => (
-  <Grid style={styles.group}>
+  <Grid style={styles.group} stackable>
     <Grid.Row>
       {makeContact(props.items)}
     </Grid.Row>

@@ -2,12 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Container, Grid, Header } from 'semantic-ui-react';
 
+const isMobile = window.innerWidth <= 667;
+
 const styles = {
   page: {
     fontFamily: '"Roboto", sans-serif',
   },
   grid: {
-    padding: 100,
+    paddingTop: isMobile ? 100 : 0,
+    paddingBottom: isMobile ? 0 : 100,
+    paddingLeft: isMobile ? 0 : 100,
+    paddingRight: isMobile ? 0 : 100,
   },
   name: {
     fontFamily: '"Open Sans Condensed", sans-serif',
@@ -45,7 +50,7 @@ const styles = {
 
 const Section = props => (
   <Segment style={styles.page} id={props.id}>
-    <Grid style={styles.grid}>
+    <Grid style={styles.grid} stackable>
       <Grid.Column width={6}>
         <Header as="h1" textAlign="center" style={{ ...styles.title, ...styles.name }}>
           {props.title}
