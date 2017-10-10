@@ -44,7 +44,7 @@ const styles = {
 };
 
 const Section = props => (
-  <Segment style={styles.page}>
+  <Segment style={styles.page} id={props.id}>
     <Grid style={styles.grid}>
       <Grid.Column width={6}>
         <Header as="h1" textAlign="center" style={{ ...styles.title, ...styles.name }}>
@@ -61,6 +61,7 @@ const Section = props => (
 );
 
 Section.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };

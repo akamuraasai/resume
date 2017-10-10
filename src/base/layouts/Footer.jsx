@@ -1,20 +1,23 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import _ from 'lodash';
 import { Segment, Container, Grid, Icon } from 'semantic-ui-react';
 
-const Footer = () => (
+const Footer = props => (
   <Segment inverted vertical style={{ paddingTop: 30, paddingBottom: 30 }}>
     <Container>
       <Grid>
         <Grid.Row>
           <Grid.Column width={3}>
-            &copy;2017 / Jonathan Willian
+            &copy;{(new Date()).getFullYear()} / {props.name}
           </Grid.Column>
           <Grid.Column width={10} />
           <Grid.Column width={3}>
-            <a href="https://fb.com/"><Icon name="linkedin" link /></a>
-            <a href="https://fb.com/"><Icon name="github" link /></a>
-            <a href="https://fb.com/"><Icon name="bitbucket" link /></a>
-            <a href="https://fb.com/"><Icon name="codepen" link /></a>
+            {_.map(props.social, profile => (
+              <a key={profile.id} href={profile.value} target="_blank">
+                <Icon name={profile.text} link />
+              </a>
+            ))}
           </Grid.Column>
         </Grid.Row>
       </Grid>

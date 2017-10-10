@@ -1,5 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import _ from 'lodash';
 import { Menu, Container } from 'semantic-ui-react';
+import Scrollchor from 'react-scrollchor';
 
 const styles = {
   menu: {
@@ -8,17 +11,14 @@ const styles = {
   },
 };
 
-const TopMenu = () => (
+const TopMenu = props => (
   <Menu fixed="top" size="huge" inverted style={styles.menu}>
     <Container>
       <Menu.Item as="a">Portfólio</Menu.Item>
       <Menu.Menu position="right">
-        <Menu.Item as="a" active>Sobre</Menu.Item>
-        <Menu.Item as="a">Habilidades</Menu.Item>
-        <Menu.Item as="a">Experiência</Menu.Item>
-        <Menu.Item as="a">Ensino</Menu.Item>
-        <Menu.Item as="a">Contatos</Menu.Item>
-        <Menu.Item as="a">Blog</Menu.Item>
+        {_.map(props.sections, section => (
+          <Menu.Item key={section.id} as={Scrollchor} to={section.menu}>{section.menu}</Menu.Item>
+        ))}
       </Menu.Menu>
     </Container>
   </Menu>

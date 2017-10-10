@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -8,12 +9,7 @@ import { fetchResume } from '../actions/resumeActions';
 import TopMenu from '../layouts/TopMenu';
 import Footer from '../layouts/Footer';
 
-import About from '../sections/About';
-import Skills from '../sections/Skills';
-import Work from '../sections/Work';
-import Study from '../sections/Study';
-import Contact from '../sections/Contact';
-import Blog from '../sections/Blog';
+import SectionItem from '../layouts/SectionItem';
 
 class Resume extends React.Component {
   componentDidMount() {
@@ -22,17 +18,22 @@ class Resume extends React.Component {
   }
 
   render() {
+    // eslint-disable-next-line react/prop-types
+    const { sections, name, social } = this.props.resume.ptBR;
+
     return (
       <div>
-        <TopMenu />
+        <TopMenu sections={sections} />
         <Segment.Group>
-          <About />
-          <Skills />
-          <Work />
-          <Study />
-          <Contact />
-          <Blog />
-          <Footer />
+          {_.map(sections, section => (
+            <SectionItem
+              key={section.id}
+              id={section.menu}
+              title={section.title}
+              containers={section.containers}
+            />
+          ))}
+          <Footer name={name} social={social} />
         </Segment.Group>
       </div>
     );
@@ -40,5 +41,6 @@ class Resume extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ fetchResume }, dispatch);
+const mapStateToProps = state => ({ resume: state.resumeReducer.resume });
 
-export default connect(null, mapDispatchToProps)(Resume);
+export default connect(mapStateToProps, mapDispatchToProps)(Resume);
