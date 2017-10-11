@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { Menu, Container } from 'semantic-ui-react';
 import Scrollchor from 'react-scrollchor';
 
+// TODO: Change to a Redux-way
 const isMobile = window.innerWidth <= 500;
 
 const styles = {

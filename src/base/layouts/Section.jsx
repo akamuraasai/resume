@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Container, Grid, Header } from 'semantic-ui-react';
 
+// TODO: Change to a Redux-way
 const isMobile = window.innerWidth <= 667;
 
 const styles = {
@@ -65,10 +66,14 @@ const Section = props => (
   </Segment>
 );
 
+Section.defaultProps = {
+  children: null,
+};
+
 Section.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default Section;
