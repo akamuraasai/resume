@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import { Segment, Container, Grid, Icon } from 'semantic-ui-react';
 
 const Footer = props => (
@@ -14,8 +14,8 @@ const Footer = props => (
           <Grid.Column width={10} />
           <Grid.Column width={3}>
             {_.map(props.social, profile => (
-              <a key={profile.id} href={profile.value} target="_blank">
-                <Icon name={profile.text} link />
+              <a key={profile.id} href={profile.value} target="_blank" rel="noopener noreferrer">
+                <Icon name={profile.text} link size="large" />
               </a>
             ))}
           </Grid.Column>
@@ -24,5 +24,10 @@ const Footer = props => (
     </Container>
   </Segment>
 );
+
+Footer.propTypes = {
+  social: PropTypes.arrayOf(PropTypes.object).isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default Footer;

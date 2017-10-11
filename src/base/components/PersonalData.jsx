@@ -12,14 +12,12 @@ const styles = {
   },
 };
 
-const makeData = (items) => {
-  const list = items || [];
-  return list.map(item => (
+const makeData = items =>
+  items.map(item => (
     <p style={styles.text} key={item.id}>
       <b style={styles.title}>{item.title}:</b> {item.value}
     </p>
   ));
-};
 
 const PersonalData = props => makeData(props.items);
 

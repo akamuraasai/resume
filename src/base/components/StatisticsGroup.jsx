@@ -18,15 +18,13 @@ const styles = {
   },
 };
 
-const makeStatistics = (items) => {
-  const list = items || [];
-  return list.map(item => (
+const makeStatistics = items =>
+  items.map(item => (
     <Statistic color={item.color} key={item.id}>
       <Statistic.Value style={styles.value_stats}>{item.value}</Statistic.Value>
       <Statistic.Label style={styles.text_stats}>{item.title}</Statistic.Label>
     </Statistic>
   ));
-};
 
 const StatisticsGroup = props => (
   <Statistic.Group style={styles.statistics}>

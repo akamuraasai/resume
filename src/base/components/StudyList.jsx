@@ -32,10 +32,8 @@ const setDate = (initial, end) => {
   return `${start} - ${ended}`;
 };
 
-const makeStudy = (items) => {
-  const list = items || [];
-
-  return list.map((item, index) => (
+const makeStudy = items =>
+  items.map((item, index) => (
     <Grid.Row key={item.id}>
       <Grid style={index > 0 ? styles.distance : {}}>
         <Grid.Row>
@@ -57,7 +55,6 @@ const makeStudy = (items) => {
       </Grid>
     </Grid.Row>
   ));
-};
 
 const StudyList = props => (
   <Grid celled="internally" style={styles.group}>

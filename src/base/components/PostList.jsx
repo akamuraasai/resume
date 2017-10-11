@@ -2,10 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Card } from 'semantic-ui-react';
 
-const makePost = (items) => {
-  const list = items || [];
-
-  return list.map(item => (
+const makePost = items =>
+  items.map(item => (
     <Card
       key={item.id}
       image={item.image}
@@ -14,7 +12,6 @@ const makePost = (items) => {
       description={item.description}
     />
   ));
-};
 
 const PostList = props => (
   <Grid columns="equal" style={{ paddingTop: 50 }}>

@@ -32,10 +32,8 @@ const setDate = (initial, end) => {
   return `${enter.format('MM/YYYY')} - ${exit} (${humanized})`;
 };
 
-const makeJob = (items) => {
-  const list = items || [];
-
-  return list.map(item => (
+const makeJob = items =>
+  items.map(item => (
     <Grid.Row key={item.id}>
       <Grid.Column>
         <Grid>
@@ -57,7 +55,6 @@ const makeJob = (items) => {
       </Grid.Column>
     </Grid.Row>
   ));
-};
 
 const JobList = props => (
   <Grid celled="internally" style={styles.group}>

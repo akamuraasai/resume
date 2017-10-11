@@ -4,10 +4,8 @@ import { Grid, Header } from 'semantic-ui-react';
 import CircularProgressbar from 'react-circular-progressbar';
 import '../assets/CircularProgress.css';
 
-const makeLanguage = (items) => {
-  const list = items || [];
-
-  return list.map(item => (
+const makeLanguage = items =>
+  items.map(item => (
     <Grid.Column key={item.id}>
       <CircularProgressbar
         percentage={item.value}
@@ -18,7 +16,6 @@ const makeLanguage = (items) => {
       <Header textAlign="center">{item.title}</Header>
     </Grid.Column>
   ));
-};
 
 const LanguageList = props => (
   <Grid columns="equal" style={{ paddingTop: 50 }}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
@@ -8,18 +9,15 @@ import { fetchResume } from '../actions/resumeActions';
 
 import TopMenu from '../layouts/TopMenu';
 import Footer from '../layouts/Footer';
-
 import SectionItem from '../layouts/SectionItem';
 
 class Resume extends React.Component {
   componentDidMount() {
-    // eslint-disable-next-line react/prop-types
     this.props.fetchResume();
   }
 
   render() {
-    // eslint-disable-next-line react/prop-types
-    const { sections, name, social } = this.props.resume.ptBR;
+    const { sections, name, social } = this.props.resume;
 
     return (
       <div>
@@ -41,6 +39,20 @@ class Resume extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ fetchResume }, dispatch);
-const mapStateToProps = state => ({ resume: state.resumeReducer.resume });
+const mapStateToProps = state => ({ resume: state.resumeReducer.resume.ptBR });
+
+Resume.defaultProps = {
+  sections: [],
+  social: [],
+  name: '',
+};
+
+Resume.propTypes = {
+  resume: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  fetchResume: PropTypes.func.isRequired,
+  sections: PropTypes.arrayOf(PropTypes.object),
+  social: PropTypes.arrayOf(PropTypes.object),
+  name: PropTypes.string,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Resume);

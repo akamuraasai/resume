@@ -19,15 +19,13 @@ const styles = {
 
 const makeSocialLinks = items =>
   items.map(item => (
-    <a href={item.value} key={item.id}>
-      <Icon name={item.text} link />
+    <a href={item.value} key={item.id} target="_blank" rel="noopener noreferrer">
+      <Icon name={item.text} link size="large" />
     </a>
   ));
 
-const makeContact = (items) => {
-  const list = items || [];
-
-  return list.map(item => (
+const makeContact = items =>
+  items.map(item => (
     <Grid.Column key={item.id} width={8} style={styles.group}>
       <Grid stackable>
         <Grid.Column width={4}>
@@ -44,7 +42,6 @@ const makeContact = (items) => {
       </Grid>
     </Grid.Column>
   ));
-};
 
 const ContactList = props => (
   <Grid style={styles.group} stackable>

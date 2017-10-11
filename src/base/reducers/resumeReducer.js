@@ -1,7 +1,9 @@
 const DEFAULT = {
   resume: {
     ptBR: {
-      sections: {},
+      name: '',
+      social: [],
+      sections: [],
     },
   },
 };

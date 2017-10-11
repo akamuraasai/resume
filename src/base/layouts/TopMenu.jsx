@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Menu, Container } from 'semantic-ui-react';
 import Scrollchor from 'react-scrollchor';
@@ -34,5 +34,9 @@ const TopMenu = props => (
     </Container>
   </Menu>
 );
+
+TopMenu.propTypes = {
+  sections: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TopMenu;

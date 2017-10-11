@@ -9,7 +9,7 @@ const styles = {
     fontFamily: '"Roboto", sans-serif',
   },
   grid: {
-    paddingTop: isMobile ? 100 : 0,
+    paddingTop: 100,
     paddingBottom: isMobile ? 0 : 100,
     paddingLeft: isMobile ? 0 : 100,
     paddingRight: isMobile ? 0 : 100,

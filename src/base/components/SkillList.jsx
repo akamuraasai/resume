@@ -13,16 +13,13 @@ const styles = {
   },
 };
 
-const makeSkill = (items) => {
-  const list = items || [];
-
-  return list.map(item => (
+const makeSkill = items =>
+  items.map(item => (
     <Grid.Column key={item.id} width={8}>
       <Header as="h4">{item.title} <i style={styles.value}>{item.value}%</i></Header>
       <Progress percent={item.value} size="small" active color={item.color} />
     </Grid.Column>
   ));
-};
 
 const SkillList = props => (
   <Grid style={styles.group}>
