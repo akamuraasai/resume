@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment/locale/pt-br';
-import { Grid, Image, Header } from 'semantic-ui-react';
+import Grid from 'semantic-ui-react/dist/es/collections/Grid/Grid';
+import Image from 'semantic-ui-react/dist/es/elements/Image/Image';
+import Header from 'semantic-ui-react/dist/es/elements/Header/Header';
 
 const styles = {
   text: {

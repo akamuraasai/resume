@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Statistic } from 'semantic-ui-react';
+import Statistic from 'semantic-ui-react/dist/es/views/Statistic/Statistic';
 
 const styles = {
   value_stats: {

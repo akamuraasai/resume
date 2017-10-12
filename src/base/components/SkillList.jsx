@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Header, Progress } from 'semantic-ui-react';
+import Grid from 'semantic-ui-react/dist/es/collections/Grid/Grid';
+import Header from 'semantic-ui-react/dist/es/elements/Header/Header';
+import Progress from 'semantic-ui-react/dist/es/modules/Progress/Progress';
 
 const styles = {
   value: {

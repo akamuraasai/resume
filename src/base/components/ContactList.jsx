@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Header, Icon } from 'semantic-ui-react';
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon';
+import Grid from 'semantic-ui-react/dist/es/collections/Grid/Grid';
+import Header from 'semantic-ui-react/dist/es/elements/Header/Header';
 
 const styles = {
   text: {

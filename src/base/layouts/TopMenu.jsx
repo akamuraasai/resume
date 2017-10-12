@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
-import { Menu, Container } from 'semantic-ui-react';
+import map from 'lodash/map';
 import Scrollchor from 'react-scrollchor';
+import Menu from 'semantic-ui-react/dist/es/collections/Menu/Menu';
+import Container from 'semantic-ui-react/dist/es/elements/Container/Container';
 
 // TODO: Change to a Redux-way
 const isMobile = window.innerWidth <= 500;
@@ -22,7 +23,7 @@ const TopMenu = props => (
     <Container>
       <Menu.Item as="a">Portfólio</Menu.Item>
       <Menu.Menu position="right" style={styles.visibility}>
-        {_.map(props.sections, section => (
+        {map(props.sections, section => (
           <Menu.Item
             key={section.id}
             as={Scrollchor}

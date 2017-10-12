@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
-import { Segment } from 'semantic-ui-react';
+import map from 'lodash/map';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import SegmentGroup from 'semantic-ui-react/dist/es/elements/Segment/SegmentGroup';
 
 import { fetchResume } from '../actions/resumeActions';
 
@@ -22,8 +22,8 @@ class Resume extends React.Component {
     return (
       <div>
         <TopMenu sections={sections} />
-        <Segment.Group>
-          {_.map(sections, section => (
+        <SegmentGroup>
+          {map(sections, section => (
             <SectionItem
               key={section.id}
               id={section.menu}
@@ -32,7 +32,7 @@ class Resume extends React.Component {
             />
           ))}
           <Footer name={name} social={social} />
-        </Segment.Group>
+        </SegmentGroup>
       </div>
     );
   }

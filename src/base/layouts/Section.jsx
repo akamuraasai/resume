@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Segment, Container, Grid, Header } from 'semantic-ui-react';
+import Segment from 'semantic-ui-react/dist/es/elements/Segment/Segment';
+import Grid from 'semantic-ui-react/dist/es/collections/Grid/Grid';
+import Header from 'semantic-ui-react/dist/es/elements/Header/Header';
+import Container from 'semantic-ui-react/dist/es/elements/Container/Container';
 
 // TODO: Change to a Redux-way
 const isMobile = window.innerWidth <= 667;

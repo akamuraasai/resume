@@ -1,7 +1,10 @@
 import React from 'react';
-import _ from 'lodash';
+import map from 'lodash/map';
 import PropTypes from 'prop-types';
-import { Segment, Container, Grid, Icon } from 'semantic-ui-react';
+import Segment from 'semantic-ui-react/dist/es/elements/Segment/Segment';
+import Container from 'semantic-ui-react/dist/es/elements/Container/Container';
+import Grid from 'semantic-ui-react/dist/es/collections/Grid/Grid';
+import Icon from 'semantic-ui-react/dist/es/elements/Icon/Icon';
 
 const Footer = props => (
   <Segment inverted vertical style={{ paddingTop: 30, paddingBottom: 30 }}>
@@ -13,7 +16,7 @@ const Footer = props => (
           </Grid.Column>
           <Grid.Column width={10} />
           <Grid.Column width={3}>
-            {_.map(props.social, profile => (
+            {map(props.social, profile => (
               <a key={profile.id} href={profile.value} target="_blank" rel="noopener noreferrer">
                 <Icon name={profile.text} link size="large" />
               </a>
