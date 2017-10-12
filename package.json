@@ -1,6 +1,7 @@
 {
   "name": "resume",
   "version": "0.1.0",
+  "homepage": "http://akamuraasai.github.io/resume",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.2",
@@ -64,12 +65,16 @@
     "webpack-visualizer-plugin": "^0.1.11",
     "whatwg-fetch": "2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "cc-report": "node scripts/report.js"
+    "cc-report": "node scripts/report.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverage": true,
