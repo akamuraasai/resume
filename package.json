@@ -4,123 +4,40 @@
   "homepage": "http://akamuraasai.github.io/resume",
   "private": true,
   "dependencies": {
-    "autoprefixer": "7.1.2",
-    "axios": "^0.16.2",
-    "babel-core": "6.25.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "7.1.1",
-    "babel-preset-react-app": "^3.0.3",
-    "babel-runtime": "6.26.0",
-    "case-sensitive-paths-webpack-plugin": "2.1.1",
-    "chalk": "1.1.3",
-    "compression-webpack-plugin": "^1.0.1",
-    "css-loader": "0.28.4",
-    "dotenv": "4.0.0",
-    "eslint": "4.18.2",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-config-react-app": "^2.0.1",
-    "eslint-loader": "1.9.0",
-    "eslint-plugin-flowtype": "2.35.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
-    "eslint-plugin-react": "7.1.0",
-    "expect": "^23.0.0",
-    "extract-text-webpack-plugin": "3.0.0",
-    "fetch-mock": "^5.13.1",
-    "file-loader": "0.11.2",
-    "firebase": "^4.4.0",
-    "fs-extra": "3.0.1",
-    "html-webpack-plugin": "2.29.0",
-    "jest": "23.0.0",
-    "lodash": "^4.17.4",
-    "moment": "^2.18.1",
-    "moment-duration-format": "^1.3.0",
-    "object-assign": "4.1.1",
-    "postcss-flexbugs-fixes": "3.2.0",
-    "postcss-loader": "2.0.6",
-    "promise": "8.0.1",
-    "prop-types": "^15.6.0",
-    "raf": "^3.3.2",
-    "react": "^16.0.0",
-    "react-circular-progressbar": "^0.2.1",
-    "react-dev-utils": "^4.1.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-scrollchor": "^4.0.0",
-    "redux": "^3.7.2",
-    "redux-mock-store": "^1.3.0",
+    "firebase": "^6.0.2",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
+    "react": "^16.8.6",
+    "react-circular-progressbar": "^2.0.0",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.3",
+    "react-scripts": "3.0.1",
+    "react-scrollchor": "^6.0.0",
+    "redux": "^4.0.1",
     "redux-multi": "^0.1.12",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
-    "semantic-ui-react": "^0.74.2",
-    "style-loader": "0.18.2",
-    "sw-precache-webpack-plugin": "0.11.4",
-    "url-loader": "0.6.0",
-    "wallaby-webpack": "^3.9.8",
-    "webpack": "4.0.0",
-    "webpack-dev-server": "3.1.8",
-    "webpack-manifest-plugin": "1.2.1",
-    "webpack-visualizer-plugin": "^0.1.11",
-    "whatwg-fetch": "2.0.3"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.87.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "cc-report": "node scripts/report.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js",
-      "raf/polyfill"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.js?(x)",
-      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "coveragePathIgnorePatterns": [
-      "src/index.jsx",
-      "src/registerServiceWorker.js"
-    ],
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
