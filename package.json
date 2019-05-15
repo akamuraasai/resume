@@ -4,6 +4,7 @@
   "homepage": "http://akamuraasai.github.io/resume",
   "private": true,
   "dependencies": {
+    "eslint-config-airbnb": "^17.1.0",
     "firebase": "^6.0.2",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.2.2",
@@ -14,6 +15,7 @@
     "react-scripts": "3.0.1",
     "react-scrollchor": "^6.0.0",
     "redux": "^4.0.1",
+    "redux-mock-store": "^1.5.3",
     "redux-multi": "^0.1.12",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
